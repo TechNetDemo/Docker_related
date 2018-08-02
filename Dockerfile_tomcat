@@ -1,0 +1,5 @@
+FROM tomcat
+
+ADD webapp_forDocker.war ./webapps/webapp.war
+
+CMD ["catalina.sh","run"]
