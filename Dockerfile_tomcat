@@ -1,5 +1,5 @@
 FROM tomcat
 ADD webapp_forDocker.war ./webapps/webapp.war
-CMD["apt-get","update"]
-CMD["apt-get","install","vim"]
+RUN apt-get update
+RUN apt-get install -y vim
 CMD ["catalina.sh","run"]

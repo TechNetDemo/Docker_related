@@ -3,5 +3,5 @@ FROM mysql:5.7
 ENV MYSQL_ROOT_PASSWORD=password
 ADD sakila-schema.sql ./docker-entrypoint-initdb.d/1_sakila-schema.sql
 ADD sakila-data.sql ./docker-entrypoint-initdb.d/2_sakila-data.sql
-CMD["apt-get","update"]
-CMD["apt-get","install","vim"]
+RUN apt-get update
+RUN apt-get install -y vim
